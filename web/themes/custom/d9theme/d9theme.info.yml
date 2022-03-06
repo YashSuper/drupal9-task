@@ -1,0 +1,23 @@
+name: 'D9 theme'
+type: theme
+description: 'D9 Bootstrap subtheme.'
+# version: VERSION
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap5
+
+libraries:
+  - d9theme/global-styling
+
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  sub_menu: 'Submenu region'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+  secondary_footer: 'Secondary footer'

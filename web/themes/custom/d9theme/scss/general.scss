@@ -1,0 +1,55 @@
+@use "partials/importer" as *;
+@use "partials/base" as *;
+
+.slick-arrow {
+  &:before {
+    color: $black!important;
+    font-family: lineicons!important;
+    font-weight: 900!important;
+  }
+  &:hover {
+    &:before {
+      color: $blue!important;
+    }
+  }
+}
+
+.slick-next {
+  &:before {
+    content: "\ea62"!important;
+  }
+}
+
+.slick-prev {
+  &:before {
+    content: "\ea60"!important;
+  }
+}
+
+.slick-dots {
+  li {
+    list-style: none;
+    button {
+      &:before {
+        content: ''!important;
+        border: 3px solid $blue!important;
+        background: transparent;
+        border-radius: 50%;
+      }
+    }
+    &.slick-active {
+      button {
+        &:before {
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+
+.custom-section {
+  padding: 50px 0;
+  @media screen and (max-width: $sm) {
+    padding: 30px 0;
+  }
+}

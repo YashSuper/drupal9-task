@@ -1,0 +1,32 @@
+global-styling:
+  css:
+    theme:
+      //cdn.lineicons.com/3.0/lineicons.css: {type: external, minified: true}
+      css/general.min.css: {}
+  js:
+    js/general.js: {}
+
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+
+slick:
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css: {type: external}
+      //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css: {type: external}
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: {type: external}
+
+task:
+  css:
+    theme:
+      css/layouts/task.min.css: {}
+  js:
+    js/task.js: {}
+
+card:
+  css:
+    theme:
+      css/components/cards.min.css: {}
