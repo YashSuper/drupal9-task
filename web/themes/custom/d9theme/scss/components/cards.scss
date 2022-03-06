@@ -11,6 +11,7 @@
     overflow: hidden;
     border-radius: 5px;
     @media screen and (min-width: $md) {
+      // would have used match height plugin for matching height if content wasn't same in task
       height: 450px;
       .custom-card__text {
         position: absolute;
