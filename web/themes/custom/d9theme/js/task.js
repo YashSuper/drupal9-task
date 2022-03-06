@@ -2,8 +2,7 @@
   Drupal.behaviors.task = {
     attach: function (context) {
 
-      // slick slider implementation.
-
+      // Slick slider implementation.
       const sliderArray = $('.tab-pane');
       sliderArray.not('.slick-initialized').slick({
         dots: false,
@@ -34,6 +33,7 @@
         ]
       });
 
+      // Tab driver for working with slick.
       $('.nav-tabs .nav-link').once('task').on('click', function () {
         sliderArray.css('opacity', '0');
         setTimeout(function () {

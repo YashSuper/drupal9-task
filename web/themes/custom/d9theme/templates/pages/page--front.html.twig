@@ -56,6 +56,8 @@
           <h1>Lorem ipsum</h1>
           <h2> This is sample text</h2>
         </div>
+
+        {# Tab list. #}
         <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <button class="nav-link" id="nav-recommended-tab" data-bs-toggle="tab" data-bs-target="#nav-recommended" type="button" role="tab" aria-controls="nav-recommended" aria-selected="false">Recommended confrences</button>
@@ -63,20 +65,27 @@
             <button class="nav-link" id="nav-past-tab" data-bs-toggle="tab" data-bs-target="#nav-past" type="button" role="tab" aria-controls="nav-past" aria-selected="false">Past Confrences</button>
           </div>
         </nav>
+
+        {# Tab Content. #}
         <div class="tab-content" id="nav-tabContent">
+
+          {# Recommended confrences list. #}
           <div class="tab-pane fade" id="nav-recommended" role="tabpanel" aria-labelledby="nav-recommended-tab">
             {{ include('/themes/custom/d9theme/templates/partials/card.twig') }}
             {{ include('/themes/custom/d9theme/templates/partials/card.twig') }}
             {{ include('/themes/custom/d9theme/templates/partials/card.twig') }}
             {{ include('/themes/custom/d9theme/templates/partials/card.twig') }}
           </div>
+
+          {# Featured confrences list. #}
           <div class="tab-pane fade show active" id="nav-feature" role="tabpanel" aria-labelledby="nav-feature-tab">
             {{ include('/themes/custom/d9theme/templates/partials/card.twig', {'class': 'feature', 'price': 'FREE'}) }}
             {{ include('/themes/custom/d9theme/templates/partials/card.twig', {'class': 'feature', 'price': '₹ 1200'}) }}
             {{ include('/themes/custom/d9theme/templates/partials/card.twig', {'class': 'feature', 'price': '₹ 1400'}) }}
             {{ include('/themes/custom/d9theme/templates/partials/card.twig', {'class': 'feature', 'price': '₹ 2300'}) }}
-
           </div>
+
+          {# Past conferences list. #}
           <div class="tab-pane fade" id="nav-past" role="tabpanel" aria-labelledby="nav-past-tab">
             {{ include('/themes/custom/d9theme/templates/partials/card.twig') }}
             {{ include('/themes/custom/d9theme/templates/partials/card.twig') }}
