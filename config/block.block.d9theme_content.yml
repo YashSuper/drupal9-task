@@ -1,0 +1,22 @@
+uuid: 8605ad34-8950-4500-81d8-8ea4920ff739
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d9theme
+_core:
+  default_config_hash: 1o0W13wt232YmsDYiRA5xtlFq0L2WNS7FmIVbBeuhIY
+id: d9theme_content
+theme: d9theme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
