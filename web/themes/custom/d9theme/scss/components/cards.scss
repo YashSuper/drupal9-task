@@ -1,0 +1,126 @@
+@use "../partials/importer" as *;
+
+.custom-card {
+  padding: $indent;
+  text-transform: capitalize;
+  &__wrapper {
+    @include flex;
+    flex-direction: column;
+    border: 1px solid rgba($black, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    @media screen and (min-width: $md) {
+      height: 450px;
+      .custom-card__text {
+        position: absolute;
+        bottom: -60px;
+        width: 100%;
+        transition: .3s all ease;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: 0 3px 15px -1px rgba($black, 0.3);
+        .custom-card__text {
+          bottom: 0px;
+        }
+        .custom-card__img {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  &.feature {
+    .custom-card__wrapper {
+      &:before {
+        content: '\ebb3';
+        font-family: lineicons;
+        font-size: $font-size-18;
+        color: $white;
+        position: absolute;
+        top: -50px;
+        left: -70px;
+        padding: 60px 60px 5px 60px;
+        transform: rotate(-45Deg);
+        background: $blue;
+        z-index: 4;
+        box-shadow: 3px 3px 15px -1px rgba($black, 0.1);
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    img {
+      transition: .4s all ease;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__details {
+    padding: $indent-l;
+    background: $white;
+    transition: all .3s ease;
+    p {
+      color: $grey;
+      @include flex;
+      gap: $indent;
+      font-weight: 500;
+      i {
+        font-size: $font-size-24;
+        color: $grey;
+      }
+      span {
+        width: calc(100% - 45px);
+      }
+      &:last-child {
+        i {
+          color: $red;
+        }
+      }
+    }
+  }
+  &__btns {
+    @include flex;
+    transition: .3s all ease;
+    transform-origin: bottom;
+    @media screen and (min-width: $md) {
+      height: 60px;
+    }
+    button {
+      border-width: 2px 2px 0 0;
+      border-style: solid;
+      border-color: $grey;
+      background: none;
+      padding: $indent;
+      width: 20%;
+      i {
+        color: $grey;
+        font-size: $font-size-28;
+      }
+      &:hover {
+        i {
+          color: $blue;
+        }
+      }
+      &:last-child {
+        width: 40%;
+        color: $blue;
+        border-right: 0;
+      }
+    }
+  }
+  &__price {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: rgba(0,0,0, 0.6);
+    padding: 5px 15px;
+    color: white;
+    border-radius: 5px;
+    z-index: 4;
+    border: 1px solid white;
+  }
+}

@@ -1,0 +1,45 @@
+@use "../partials/importer" as *;
+
+.nav-tabs {
+  justify-content: space-between;
+  border: none;
+  border-bottom: 2px solid $blue;
+  .nav-link {
+    color: $blue;
+    text-transform: capitalize;
+    font-weight: 500;
+    width: 33%;
+    text-align: center;
+    transform: scale(0.9);
+    font-size: $font-size-20;
+    transition: .3s all ease;
+    &:hover,
+    &:focus {
+      border: none;
+      background: rgba($grey, 0.2);
+    }
+    &.active {
+      border: none;
+      background: none;
+      transform: scale(1.01);
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%) rotate(135Deg);
+        background: $white;
+        height: 15px;
+        width: 15px;
+        z-index: 1;
+        border-width: 2px 2px 1px 1px;
+        border-style: solid;
+        border-color: $blue $blue $white $white;
+      }
+    }
+  }
+}
+.tab-content {
+  padding: $indent 0;
+}

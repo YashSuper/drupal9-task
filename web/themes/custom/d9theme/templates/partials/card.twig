@@ -1,0 +1,41 @@
+{% block card %}
+{% if class %}
+  <div class="custom-card {{class}}">
+{% else %}
+  <div class="custom-card">
+{% endif %}
+  <div class="custom-card__wrapper">
+  {% if price %}
+    <span class="custom-card__price"> {{price}} </span>
+  {% endif %}
+  <div class="custom-card__img">
+    <img src="/themes/custom/d9theme/images/banner-sample.jpg" alt="banner" width="600" height="360">
+  </div>
+  <div class="custom-card__text">
+    <div class="custom-card__details">
+      <h3>Southampton industries conference</h3>
+      <p>
+        <i class="lni lni-tag"></i>
+        <span> management leadership </span>
+      </p>
+      <p>
+        <i class="lni lni-calendar"></i>
+        <span> 11 may 2016 </span>
+      </p>
+      <p>
+        <i class="lni lni-map-marker"></i>
+        <span>
+          park plaza hotel banglore india
+        </span>
+      </p>
+    </div>
+    <div class="custom-card__btns">
+      <button type="button" name="button"><i class="lni lni-heart"></i></button>
+      <button type="button" name="button"><i class="lni lni-share-alt-1"></i></button>
+      <button type="button" name="button"><i class="lni lni-cloud-download"></i></button>
+      <button type="button" name="button"> View details</button>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

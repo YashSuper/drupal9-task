@@ -1,0 +1,64 @@
+@use "importer" as *;
+
+html, body {
+  main,
+  footer {
+    .container {
+      padding: 0 $indent-l!important;
+      max-width: 100% !important;
+      &.full-width {
+        @media screen and (max-width: $sm) {
+          padding: 0 !important;
+        }
+      }
+      &.footer {
+        @media screen and (max-width: $sm) {
+          padding: 0 $indent-sm !important;
+        }
+      }
+      .slick-prev {
+        left: 15px!important;
+        @media screen and (min-width: $xs) {
+          left: 25px!important;
+        }
+        @media screen and (min-width: $sm + 1) {
+          left: 15px!important;
+        }
+        @media screen and (min-width: $xm + 1) {
+          left: -25px!important;
+        }
+      }
+      .slick-next {
+        right: 15px!important;
+        @media screen and (min-width: $xs) {
+          right: 25px!important;
+        }
+        @media screen and (min-width: $sm + 1) {
+          right: 15px!important;
+        }
+        @media screen and (min-width: $xm + 1) {
+          right: -25px!important;
+        }
+      }
+    }
+    @media screen and (max-width: $sm) {
+      margin-top: 45px;
+    }
+    @media screen and (min-width: $md) {
+      .container {
+        padding: 0 $indent-xl!important
+      }
+    }
+    @media screen and (min-width: $lg+1) {
+      .container {
+        padding: 0 7.15rem!important;
+      }
+    }
+    @media screen and (min-width: $xlg+1) {
+      font-size: 16px;
+      .container {
+        padding: 0 100px!important;
+      }
+    }
+  }
+}
